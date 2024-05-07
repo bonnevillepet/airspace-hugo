@@ -24,33 +24,6 @@
 {{ end }}
 <!-- /banner -->
 
-<!-- about -->
-{{ with .Params.about }}
-{{ if .enable }}
-<section class="about section">
-  <div class="container">
-    <div class="row">
-      <div class="col-md-7 col-sm-12">
-        <div class="block">
-          <div class="section-title">
-            {{ with .title }}<h2>{{ . | markdownify }}</h2>{{ end }}
-            {{ with .description }}{{ . | $.Page.RenderString (dict "display" "block") }}{{ end }}
-          </div>
-          {{ with .content }}{{ . | $.Page.RenderString (dict "display" "block") }}{{ end }}
-        </div>
-      </div>
-      <div class="col-md-5 col-sm-12">
-        <div class="block">
-          <img src="{{ .image | relURL }}" class="img-responsive" alt="Img">
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
-{{ end }}
-{{ end }}
-<!-- /about -->
-
 <!-- portfolio -->
 {{ with .Params.portfolio }}
 {{ if .enable }}
@@ -78,6 +51,33 @@
 {{ partial "service.html" . }}
 {{ end }}
 <!-- /service -->
+
+<!-- about -->
+{{ with .Params.about }}
+{{ if .enable }}
+<section class="about section">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-7 col-sm-12">
+        <div class="block">
+          <div class="section-title">
+            {{ with .title }}<h2>{{ . | markdownify }}</h2>{{ end }}
+            {{ with .description }}{{ . | $.Page.RenderString (dict "display" "block") }}{{ end }}
+          </div>
+          {{ with .content }}{{ . | $.Page.RenderString (dict "display" "block") }}{{ end }}
+        </div>
+      </div>
+      <div class="col-md-5 col-sm-12">
+        <div class="block">
+          <img src="{{ .image | relURL }}" class="img-responsive" alt="Img">
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+{{ end }}
+{{ end }}
+<!-- /about -->
 
 <!-- call to action -->
 {{ if .Params.cta.enable }}
