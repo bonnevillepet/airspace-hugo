@@ -9,8 +9,7 @@ $text-light: {{.text_light | default "#999"}};
 $body-bg: {{.body_color | default "#FDFCF3"}};
 $border-color: {{.border_color | default "#ECECEC"}};
 $black: {{.black | default "#000"}};
-// $white: {{.white | default "#fff"}};
-$white: {{.white | default "#FDFCF3"}};
+$white: {{.white | default "#fff"}};
 $light: {{.light | default "#EDF6F5"}};
 
 
