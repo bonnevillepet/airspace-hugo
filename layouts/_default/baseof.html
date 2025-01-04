@@ -40,13 +40,8 @@ AUTHOR WEBSITE: https://gethugothemes.com
 	</main>
 
 	<!-- cache partial only in production -->
-	{{ if hugo.IsProduction }}
-	{{ partialCached "footer.html" . }}
-	{{ partialCached "script.html" . }}
-	{{ else }}
 	{{ partial "footer.html" . }}
 	{{ partial "script.html" . }}
-	{{ end }}
 </body>
 
 </html>
