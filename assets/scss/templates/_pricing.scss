@@ -28,15 +28,15 @@
   .price-title {
     padding: 30px 0 20px;
 
-    >h3 {
-      font-weight: 700;
+    >h2 {
+      font-weight: 600;
       margin: 0 0 5px;
-      font-size: 15px;
+      font-size: 28px;
       text-transform: uppercase;
     }
 
     >p {
-      font-size: 14px;
+      font-size: 15px;
       font-weight: 400;
       line-height: 18px;
       margin-top: 5px;
@@ -44,7 +44,7 @@
 
     .value {
       color: $color-primary;
-      font-size: 50px;
+      font-size: 45px;
       padding: 10px 0;
     }
   }
