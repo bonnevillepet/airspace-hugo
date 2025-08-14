@@ -52,6 +52,12 @@
     </div>
     {{- end }}{{ end }}
   */}}
+  <script>
+      window.GingrForms.createForm({
+          form_name: 'lead_form',
+          subdomain: 'bonnevillepet'
+      })
+  </script>
     <div class="contact-box row">
       {{ with site.Params.contact -}}
       <div class="col-md-6 col-sm-12">
@@ -82,14 +88,6 @@
       {{- end }}
     </div>
   </div>
-
-  <script>
-      window.GingrForms.createForm({
-          form_name: 'lead_form',
-          subdomain: 'bonnevillepet'
-      })
-  </script>
-
 </section>
 
 {{ end }}
