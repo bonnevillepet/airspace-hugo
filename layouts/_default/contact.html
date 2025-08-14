@@ -2,7 +2,7 @@
 
 {{ partial "page-title.html" . }}
 
-<section class="contact-form">
+{{/*  <section class="contact-form">
   <div class="container">
     {{ with site.Params.contact.form }}{{ if .enable -}}
     <div class="row">
@@ -81,6 +81,13 @@
       {{- end }}
     </div>
   </div>
-</section>
+
+</section>  */}}
+<script>
+    window.GingrForms.createForm({
+        form_name: 'lead_form',
+        subdomain: 'bonnevillepet'
+    })
+</script>
 
 {{ end }}
