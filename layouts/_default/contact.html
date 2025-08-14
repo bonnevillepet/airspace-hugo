@@ -2,9 +2,9 @@
 
 {{ partial "page-title.html" . }}
 
-{{/*  <section class="contact-form">
+<section class="contact-form">
   <div class="container">
-    {{ with site.Params.contact.form }}{{ if .enable -}}
+    {{/*  {{ with site.Params.contact.form }}{{ if .enable -}}
     <div class="row">
       <form method="POST" {{ if .use_netlify }}name="{{ printf "contact_%s" $.Language.Lang }}" action="{{ "/message_sent" | relLangURL }}" netlify netlify-honeypot="nhp"{{ else }}name="contact" action="{{ .action | safeURL }}"{{ end }}>
         <div class="col-md-6 col-sm-12">
@@ -51,6 +51,7 @@
       </form>
     </div>
     {{- end }}{{ end }}
+  */}}
     <div class="contact-box row">
       {{ with site.Params.contact -}}
       <div class="col-md-6 col-sm-12">
@@ -82,12 +83,13 @@
     </div>
   </div>
 
-</section>  */}}
-<script>
-    window.GingrForms.createForm({
-        form_name: 'lead_form',
-        subdomain: 'bonnevillepet'
-    })
-</script>
+  <script>
+      window.GingrForms.createForm({
+          form_name: 'lead_form',
+          subdomain: 'bonnevillepet'
+      })
+  </script>
+
+</section>
 
 {{ end }}
